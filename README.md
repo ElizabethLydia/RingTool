@@ -164,11 +164,17 @@ We recommend using a virtual environment to avoid conflicts with other projects.
 
 > ⚠️ WARNING: The requirements file is tested with CUDA 11.8. If you are using a different CUDA version, please make sure to install the correct version of PyTorch, Triton, mamba-ssm as well as other packages. You can find the correct Triton version match [here](https://docs.nvidia.com/deeplearning/triton-inference-server/release-notes/rel-24-03.html).
 
+#### Install PyTorch, mamba-ssm
+> Note: You might need to manually resolve missing packages when installing mamba-ssm.
+
+
 Using `venv`:
 ```sh
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+pip install torch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 --index-url https://download.pytorch.org/whl/cu118
+pip install mamba-ssm==2.2.4 --no-build-isolation
 ```
 
 Using `conda`:
@@ -176,6 +182,8 @@ Using `conda`:
 conda create -n ringtool python=3.10
 conda activate ringtool
 pip install -r requirements.txt
+pip install torch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 --index-url https://download.pytorch.org/whl/cu118
+pip install mamba-ssm==2.2.4 --no-build-isolation
 ```
 
 Using `uv`:
@@ -183,6 +191,8 @@ Using `uv`:
 uv venv --python 3.10
 source .venv/bin/activate
 uv pip install -r requirements.txt
+uv pip install torch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 --index-url https://download.pytorch.org/whl/cu118
+uv pip install mamba-ssm==2.2.4 --no-build-isolation
 ```
 
 If you see building errors for mamba-ssm, you can try

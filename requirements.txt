@@ -1,12 +1,13 @@
 einops==0.8.1
-mamba_ssm==2.2.4
 matplotlib==3.10.1
 neurokit2==0.2.10
-numpy==2.2.5
+numpy==1.26.4
 pandas==2.2.3
 pytest==8.3.5
 scipy==1.15.2
 slack_sdk==3.35.0
 toml==0.10.2
-torch==2.1.2+cu118
 tqdm==4.67.1
+packaging
+wheel
+setuptools
