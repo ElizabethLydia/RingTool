@@ -186,6 +186,9 @@ uv pip install -r requirements.txt
 ```
 
 ### 💨 Running the Code
+---
+---
+
 #### Quick Testing
 For quick testing, please download the provided dataset from [here](https://www.kaggle.com/datasets/ringdataset/ring-dataset) and remember the path.
 
