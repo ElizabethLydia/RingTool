@@ -186,6 +186,29 @@ uv pip install -r requirements.txt
 ```
 
 ### 💨 Running the Code
+#### Quick Testing
+For quick testing, please download the provided dataset from [here](https://www.kaggle.com/datasets/ringdataset/ring-dataset) and remember the path.
+
+We provide a sample testing config: [`config/only_test/resnet-ring1-hr-all-ir-paper.json`](config/only_test/resnet-ring1-hr-all-ir-paper.json). You can use this config to test the code by running the following command:
+
+```sh
+python3 main.py --data-path <replace-with-your-data-path> --config config/only_test/resnet-ring1-hr-all-ir-paper.json
+```
+
+After running the above command, you should see the output in [csv](csv) folder. And the output should be similar to the following:
+
+```csv
+exp_name,mode,ring_type,fold,task,input_type,dataset_task,method_name,epochs,lr,criterion,batch_size,sample_len,mae_with_std,rmse_with_std,mape_with_std,pearson_with_std
+resnet-ring1-hr-all-ir-paper,test,ring1,Fold-3,hr,['ir-filtered'],"['sitting', 'spo2', 'deepsquat', 'talking', 'shaking_head', 'standing', 'striding']",resnet,200,0.001,mse,128,532,4.89±0.31,8.65±3.52,6.21±0.49,0.73±0.03
+resnet-ring1-hr-all-ir-paper,test,ring1,all-folds,hr,['ir-filtered'],"['sitting', 'spo2', 'deepsquat', 'talking', 'shaking_head', 'standing', 'striding']",resnet,200,0.001,mse,128,532,4.89±0.31,8.65±3.52,6.21±0.49,0.73±0.03
+```
+
+If you find any issues, please check running log in the [logs](logs) directory as well as standard output in your terminal.
+
+
+---
+---
+
 We have already packed a set of configurations for you to run the code. You can find them in the [`config`](config) folder. Below commands will run the training and evaluation of all the methods in the corresponding configuration files.
 
 #### Unsupervised Methods

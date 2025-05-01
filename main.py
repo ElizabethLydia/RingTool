@@ -30,7 +30,8 @@ def generate_split_config(mode: str, split: Dict) -> List[Dict]:
     # 5-fold cross-validation.
     # if test set is fold 4, then valid set is fold 5 and train set is 1, 2, 3 train set is fold 1, 2, 3
     if mode == ExperimentMode.FIVE_FOLD.value or mode == ExperimentMode.TEST.value:
-        for i in range(5):
+        for _ in range(1):  # set to 1 for review testing. In real case, the value was set to 5
+            i = 2
             test_fold = i + 1  # Folds are 1-indexed
             valid_fold = (i + 1) % 5 + 1  # Wraps around to fold 1 after fold 5
 
