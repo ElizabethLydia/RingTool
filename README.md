@@ -185,6 +185,13 @@ source .venv/bin/activate
 uv pip install -r requirements.txt
 ```
 
+If you see building errors for mamba-ssm, you can try
+
+```sh
+pip install mamba-ssm --no-build-isolation
+```
+
+
 ### 💨 Running the Code
 ---
 ---
