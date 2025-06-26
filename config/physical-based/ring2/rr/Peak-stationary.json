@@ -1,21 +1,48 @@
 {
     "exp_name": "peak-stationary",
     "mode": "test",
-    "split":{
-        "train": ["00009", "00012", "00005", "00020", "00031", "00022", "00029", "00016", "00026", "00024", "00014", "00010", "00011", "00027", "00008", "00019", "00030", "00003", "00025", "00006", "00033"], 
-        "valid": ["00013", "00018", "00002", "00032", "00028", "00021", "00000"], 
-        "test": ["00023", "00004", "00040", "00015", "00017", "00001", "00007"], 
-        "5-Fold": {"Fold-1": ["00023", "00004", "00040", "00015", "00017", "00001", "00007"], 
-            "Fold-2": ["00013", "00018", "00002", "00032", "00028", "00021", "00000"], 
-            "Fold-3": ["00009", "00012", "00005", "00020", "00031", "00022", "00029"],
-            "Fold-4": ["00016","00025", "00024", "00014", "00010", "00011", "00027"], 
-            "Fold-5": ["00008", "00019", "00030", "00003", "00026" , "00006", "00033"]
-    }
+    "split": {
+        "train": [
+            "00009",
+            "00020",
+            "00022",
+            "00012",
+            "00031"
+        ],
+        "valid": [
+            "00005"
+        ],
+        "test": [
+            "00029"
+        ],
+        "5-Fold": {
+            "Fold-1": [
+                "00009",
+                "00020"
+            ],
+            "Fold-2": [
+                "00022",
+                "00012"
+            ],
+            "Fold-3": [
+                "00031"
+            ],
+            "Fold-4": [
+                "00005"
+            ],
+            "Fold-5": [
+                "00029"
+            ]
+        }
     },
-    "dataset":{
+    "dataset": {
         "ring_type": "ring2",
-        "input_type": ["ir-filtered-rr"],
-        "label_type": ["resp_rr"],
+        "input_type": [
+            "ir-filtered-rr"
+        ],
+        "label_type": [
+            "resp_rr"
+        ],
         "shuffle": true,
         "batch_size": 128,
         "quality_assessment": {
@@ -24,33 +51,43 @@
         },
         "target_fs": 100,
         "window_duration": 30,
-        "experiment": ["Health", "Daily","Sport"],
-        "task": ["sitting", "spo2", "talking", "shaking_head", "standing"]
+        "experiment": [
+            "Health",
+            "Daily",
+            "Sport"
+        ],
+        "task": [
+            "sitting",
+            "spo2",
+            "talking",
+            "shaking_head",
+            "standing"
+        ]
     },
     "seed": 42,
     "csv_path": "csv/peak/peak.csv",
     "img_path": "img/peak",
     "method": {
         "name": "peak",
-        "type": "unsupervised", 
+        "type": "unsupervised",
         "model_path": null,
-        "params":{
-            "in_channels": 1,  
+        "params": {
+            "in_channels": 1,
             "base_filters": 32,
             "kernel_size": 5,
             "stride": 2,
             "groups": 1,
             "n_block": 8,
-            "n_classes": 180,  
+            "n_classes": 180,
             "downsample_gap": 2,
             "increasefilter_gap": 4,
             "backbone": false
         }
     },
-    "train":{
+    "train": {
         "device": "1",
         "epochs": 200,
-        "lr": 1e-3,
+        "lr": 0.001,
         "criterion": "mse",
         "optimizer": "adam",
         "early_stopping": {
@@ -64,13 +101,17 @@
             "save_best_only": true
         }
     },
-    "test":{
+    "test": {
         "device": "1",
         "batch_size": 128,
-        "metrics": ["mae", "rmse", "mape", "pearson"],
+        "metrics": [
+            "mae",
+            "rmse",
+            "mape",
+            "pearson"
+        ],
         "model_path": null,
         "model_name": null
     },
     "pretrain_model": "TODO"
-
 }

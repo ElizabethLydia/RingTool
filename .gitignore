@@ -34,3 +34,5 @@ run.sh
 data_path.toml
 
 .backup/
+
+/root/RingTool/csv

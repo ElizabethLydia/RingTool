@@ -25,13 +25,42 @@ from trainer.load_trainer import load_trainer
 from utils.utils import calculate_avg_metrics, save_metrics_to_csv
 
 
+# def generate_split_config(mode: str, split: Dict) -> List[Dict]:
+#     split_config = []
+#     # 5-fold cross-validation.
+#     # if test set is fold 4, then valid set is fold 5 and train set is 1, 2, 3 train set is fold 1, 2, 3
+#     if mode == ExperimentMode.FIVE_FOLD.value or mode == ExperimentMode.TEST.value:
+#         for _ in range(1):  # set to 1 for review testing. In real case, the value was set to 5
+#             i = 2
+#             test_fold = i + 1  # Folds are 1-indexed
+#             valid_fold = (i + 1) % 5 + 1  # Wraps around to fold 1 after fold 5
+
+#             valid_p = split['5-Fold'][f'Fold-{valid_fold}']
+#             test_p = split['5-Fold'][f'Fold-{test_fold}']
+            
+#             # Train participants are from the remaining folds
+#             train_p = []
+#             for j in range(1, 6):  # Folds are 1-indexed
+#                 if j != valid_fold and j != test_fold:
+#                     train_p.extend(split['5-Fold'][f'Fold-{j}'])
+            
+#             split_config.append({"train": train_p, "valid": valid_p, "test": test_p, "fold": f"Fold-{test_fold}"})
+#     elif mode == ExperimentMode.TRAIN.value:
+#         # split into train, valid, test
+#         split_config.append({"train": split['train'], "valid": split['valid'], "test": split['test'], "fold": "Fold-1"})
+    
+#     else:
+#         logging.error(f"Invalid mode. Choose from {[mode.value for mode in ExperimentMode]}.")
+#         raise ValueError(f"Invalid mode. Choose from {[mode.value for mode in ExperimentMode]}.")
+#     return split_config
+
+
 def generate_split_config(mode: str, split: Dict) -> List[Dict]:
     split_config = []
     # 5-fold cross-validation.
     # if test set is fold 4, then valid set is fold 5 and train set is 1, 2, 3 train set is fold 1, 2, 3
     if mode == ExperimentMode.FIVE_FOLD.value or mode == ExperimentMode.TEST.value:
-        for _ in range(1):  # set to 1 for review testing. In real case, the value was set to 5
-            i = 2
+        for i in range(5):
             test_fold = i + 1  # Folds are 1-indexed
             valid_fold = (i + 1) % 5 + 1  # Wraps around to fold 1 after fold 5
 
@@ -53,7 +82,6 @@ def generate_split_config(mode: str, split: Dict) -> List[Dict]:
         logging.error(f"Invalid mode. Choose from {[mode.value for mode in ExperimentMode]}.")
         raise ValueError(f"Invalid mode. Choose from {[mode.value for mode in ExperimentMode]}.")
     return split_config
-
 
 def load_config(config_path: str) -> Dict:
     with open(config_path, 'r') as file:
