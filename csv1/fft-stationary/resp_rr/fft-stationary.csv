@@ -1,0 +1,3 @@
+exp_name,mode,ring_type,fold,task,input_type,dataset_task,method_name,epochs,lr,criterion,batch_size,sample_len,mae_with_std,rmse_with_std,mape_with_std,pearson_with_std
+fft-stationary,test,ring2,,resp_rr,['ir-filtered-rr'],"['sitting', 'spo2', 'talking', 'shaking_head', 'standing']",fft,200,0.001,mse,128,211,4.87±0.20,5.69±1.62,26.11±0.94,0.30±0.07
+fft-stationary,test,ring1,,resp_rr,['ir-filtered-rr'],"['sitting', 'spo2', 'talking', 'shaking_head', 'standing']",fft,200,0.001,mse,128,444,4.92±0.15,5.84±1.49,27.24±0.66,0.33±0.04

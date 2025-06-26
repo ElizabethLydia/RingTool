@@ -1,0 +1,7 @@
+exp_name,mode,ring_type,fold,task,input_type,dataset_task,method_name,epochs,lr,criterion,batch_size,sample_len,mae_with_std,rmse_with_std,mape_with_std,pearson_with_std
+resnet-ring1-hr-stationary-ir,test,ring1,Fold-1,hr,['ir-filtered'],"['sitting', 'spo2', 'talking', 'shaking_head', 'standing']",resnet,200,0.001,mse,128,168,24.62±0.41,25.19±4.47,29.39±0.41,0.03±0.08
+resnet-ring1-hr-stationary-ir,test,ring1,Fold-2,hr,['ir-filtered'],"['sitting', 'spo2', 'talking', 'shaking_head', 'standing']",resnet,200,0.001,mse,128,72,3.74±0.31,4.56±1.83,4.65±0.41,0.89±0.06
+resnet-ring1-hr-stationary-ir,test,ring1,Fold-3,hr,['ir-filtered'],"['sitting', 'spo2', 'talking', 'shaking_head', 'standing']",resnet,200,0.001,mse,128,94,9.67±0.65,11.51±3.78,13.00±0.93,0.26±0.10
+resnet-ring1-hr-stationary-ir,test,ring1,Fold-4,hr,['ir-filtered'],"['sitting', 'spo2', 'talking', 'shaking_head', 'standing']",resnet,200,0.001,mse,128,54,8.41±0.48,9.10±3.12,8.04±0.41,0.69±0.10
+resnet-ring1-hr-stationary-ir,test,ring1,Fold-5,hr,['ir-filtered'],"['sitting', 'spo2', 'talking', 'shaking_head', 'standing']",resnet,200,0.001,mse,128,87,49.02±0.57,49.30±7.67,70.61±0.20,0.80±0.06
+resnet-ring1-hr-stationary-ir,test,ring1,all-folds,hr,['ir-filtered'],"['sitting', 'spo2', 'talking', 'shaking_head', 'standing']",resnet,200,0.001,mse,128,475,21.12±0.74,26.61±6.43,27.52±1.06,0.61±0.04

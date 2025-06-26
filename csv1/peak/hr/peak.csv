@@ -1,0 +1,3 @@
+exp_name,mode,ring_type,fold,task,input_type,dataset_task,method_name,epochs,lr,criterion,batch_size,sample_len,mae_with_std,rmse_with_std,mape_with_std,pearson_with_std
+peak,test,ring2,,hr,['ir-filtered'],"['sitting', 'spo2', 'deepsquat', 'talking', 'shaking_head', 'standing', 'striding']",peak,200,0.001,mse,128,429,36.21±1.19,43.81±9.46,49.21±1.87,-0.52±0.04
+peak,test,ring1,,hr,['ir-filtered'],"['sitting', 'spo2', 'deepsquat', 'talking', 'shaking_head', 'standing', 'striding']",peak,200,0.001,mse,128,532,16.29±0.78,24.21±6.38,20.46±1.00,0.43±0.04

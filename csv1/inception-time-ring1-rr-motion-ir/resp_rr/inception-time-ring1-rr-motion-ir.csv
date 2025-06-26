@@ -1,0 +1,7 @@
+exp_name,mode,ring_type,fold,task,input_type,dataset_task,method_name,epochs,lr,criterion,batch_size,sample_len,mae_with_std,rmse_with_std,mape_with_std,pearson_with_std
+inception-time-ring1-rr-motion-ir,test,ring1,Fold-1,resp_rr,['ir-filtered-rr'],"['deepsquat', 'striding']",inception_time,200,0.001,mse,128,22,3.79±0.55,4.55±2.30,16.40±2.26,0.43±0.20
+inception-time-ring1-rr-motion-ir,test,ring1,Fold-2,resp_rr,['ir-filtered-rr'],"['deepsquat', 'striding']",inception_time,200,0.001,mse,128,12,5.68±1.18,6.91±4.05,22.88±3.95,-0.88±0.15
+inception-time-ring1-rr-motion-ir,test,ring1,Fold-3,resp_rr,['ir-filtered-rr'],"['deepsquat', 'striding']",inception_time,200,0.001,mse,128,10,3.76±0.99,4.79±3.09,22.16±6.24,-0.38±0.33
+inception-time-ring1-rr-motion-ir,test,ring1,Fold-4,resp_rr,['ir-filtered-rr'],"['deepsquat', 'striding']",inception_time,200,0.001,mse,128,7,8.67±0.91,8.95±3.88,36.37±2.41,0.79±0.28
+inception-time-ring1-rr-motion-ir,test,ring1,Fold-5,resp_rr,['ir-filtered-rr'],"['deepsquat', 'striding']",inception_time,200,0.001,mse,128,8,4.08±1.32,5.37±3.97,38.33±21.16,0.67±0.30
+inception-time-ring1-rr-motion-ir,test,ring1,all-folds,resp_rr,['ir-filtered-rr'],"['deepsquat', 'striding']",inception_time,200,0.001,mse,128,59,4.79±0.45,5.89±2.34,24.04±3.30,-0.07±0.13

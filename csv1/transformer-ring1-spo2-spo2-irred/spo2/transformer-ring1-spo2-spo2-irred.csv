@@ -1,0 +1,5 @@
+exp_name,mode,ring_type,fold,task,input_type,dataset_task,method_name,epochs,lr,criterion,batch_size,sample_len,mae_with_std,rmse_with_std,mape_with_std,pearson_with_std
+transformer-ring1-spo2-spo2-irred,5fold,ring1,Fold-1,spo2,"['ir-filtered', 'red-filtered']",['spo2'],transformer,200,0.001,mse,16,34,3.88±0.41,4.54±1.97,4.24±0.47,-0.31±0.17
+transformer-ring1-spo2-spo2-irred,5fold,ring1,Fold-2,spo2,"['ir-filtered', 'red-filtered']",['spo2'],transformer,200,0.001,mse,16,33,3.90±0.77,5.86±3.37,4.49±0.95,0.01±0.18
+transformer-ring1-spo2-spo2-irred,5fold,ring1,Fold-1,spo2,"['ir-filtered', 'red-filtered']",['spo2'],transformer,200,0.001,mse,16,34,3.88±0.41,4.54±1.97,4.24±0.47,-0.31±0.17
+transformer-ring1-spo2-spo2-irred,5fold,ring1,Fold-2,spo2,"['ir-filtered', 'red-filtered']",['spo2'],transformer,200,0.001,mse,16,33,3.90±0.77,5.86±3.37,4.49±0.95,0.01±0.18

@@ -1,0 +1,7 @@
+exp_name,mode,ring_type,fold,task,input_type,dataset_task,method_name,epochs,lr,criterion,batch_size,sample_len,mae_with_std,rmse_with_std,mape_with_std,pearson_with_std
+inception-time-ring1-rr-stationary-ir,test,ring1,Fold-1,resp_rr,['ir-filtered-rr'],"['sitting', 'spo2', 'talking', 'shaking_head', 'standing']",inception_time,200,0.001,mse,128,168,2.43±0.16,3.23±1.19,16.10±1.63,-0.10±0.08
+inception-time-ring1-rr-stationary-ir,test,ring1,Fold-2,resp_rr,['ir-filtered-rr'],"['sitting', 'spo2', 'talking', 'shaking_head', 'standing']",inception_time,200,0.001,mse,128,72,4.01±0.28,4.67±1.68,21.50±2.56,0.13±0.12
+inception-time-ring1-rr-stationary-ir,test,ring1,Fold-3,resp_rr,['ir-filtered-rr'],"['sitting', 'spo2', 'talking', 'shaking_head', 'standing']",inception_time,200,0.001,mse,128,94,2.30±0.18,2.87±1.19,14.50±1.08,0.11±0.10
+inception-time-ring1-rr-stationary-ir,test,ring1,Fold-4,resp_rr,['ir-filtered-rr'],"['sitting', 'spo2', 'talking', 'shaking_head', 'standing']",inception_time,200,0.001,mse,128,54,3.83±0.23,4.18±1.40,20.28±1.01,0.01±0.14
+inception-time-ring1-rr-stationary-ir,test,ring1,Fold-5,resp_rr,['ir-filtered-rr'],"['sitting', 'spo2', 'talking', 'shaking_head', 'standing']",inception_time,200,0.001,mse,128,87,4.70±0.28,5.37±1.87,34.61±2.73,0.37±0.10
+inception-time-ring1-rr-stationary-ir,test,ring1,all-folds,resp_rr,['ir-filtered-rr'],"['sitting', 'spo2', 'talking', 'shaking_head', 'standing']",inception_time,200,0.001,mse,128,475,3.22±0.11,3.99±1.02,20.47±0.94,-0.19±0.05

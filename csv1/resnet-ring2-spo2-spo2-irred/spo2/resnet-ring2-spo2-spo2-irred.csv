@@ -1,0 +1,5 @@
+exp_name,mode,ring_type,fold,task,input_type,dataset_task,method_name,epochs,lr,criterion,batch_size,sample_len,mae_with_std,rmse_with_std,mape_with_std,pearson_with_std
+resnet-ring2-spo2-spo2-irred,5fold,ring2,Fold-1,spo2,"['ir-filtered', 'red-filtered']",['spo2'],resnet,200,0.001,mse,128,22,3.53±0.51,4.23±1.98,3.91±0.58,-0.20±0.22
+resnet-ring2-spo2-spo2-irred,5fold,ring2,Fold-2,spo2,"['ir-filtered', 'red-filtered']",['spo2'],resnet,200,0.001,mse,128,33,3.94±0.71,5.64±3.20,4.50±0.88,-0.03±0.18
+resnet-ring2-spo2-spo2-irred,5fold,ring2,Fold-1,spo2,"['ir-filtered', 'red-filtered']",['spo2'],resnet,200,0.001,mse,128,22,3.53±0.51,4.23±1.98,3.91±0.58,-0.20±0.22
+resnet-ring2-spo2-spo2-irred,5fold,ring2,Fold-2,spo2,"['ir-filtered', 'red-filtered']",['spo2'],resnet,200,0.001,mse,128,33,3.94±0.71,5.64±3.20,4.50±0.88,-0.03±0.18

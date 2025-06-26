@@ -1,0 +1,3 @@
+exp_name,mode,ring_type,fold,task,input_type,dataset_task,method_name,epochs,lr,criterion,batch_size,sample_len,mae_with_std,rmse_with_std,mape_with_std,pearson_with_std
+fft-motion,test,ring2,,samsung_hr_com,['ir-filtered'],"['deepsquat', 'striding']",fft,200,0.001,mse,128,6,39.87±10.55,46.33±29.34,42.57±13.30,0.56±0.41
+fft-motion,test,ring1,,samsung_hr_com,['ir-filtered'],"['deepsquat', 'striding']",fft,200,0.001,mse,128,7,43.72±9.72,49.78±28.28,50.50±13.76,0.44±0.40

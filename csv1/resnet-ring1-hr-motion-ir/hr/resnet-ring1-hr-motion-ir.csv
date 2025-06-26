@@ -1,0 +1,7 @@
+exp_name,mode,ring_type,fold,task,input_type,dataset_task,method_name,epochs,lr,criterion,batch_size,sample_len,mae_with_std,rmse_with_std,mape_with_std,pearson_with_std
+resnet-ring1-hr-motion-ir,test,ring1,Fold-1,hr,['ir-filtered'],"['deepsquat', 'striding']",resnet,200,0.001,mse,128,22,32.02±2.66,34.27±12.65,37.30±2.75,-0.67±0.17
+resnet-ring1-hr-motion-ir,test,ring1,Fold-2,hr,['ir-filtered'],"['deepsquat', 'striding']",resnet,200,0.001,mse,128,10,24.12±4.31,27.37±14.22,24.42±3.93,-0.46±0.31
+resnet-ring1-hr-motion-ir,test,ring1,Fold-3,hr,['ir-filtered'],"['deepsquat', 'striding']",resnet,200,0.001,mse,128,10,30.08±5.01,33.62±16.06,58.43±12.12,0.66±0.27
+resnet-ring1-hr-motion-ir,test,ring1,Fold-4,hr,['ir-filtered'],"['deepsquat', 'striding']",resnet,200,0.001,mse,128,7,29.28±4.09,30.94±15.61,25.67±2.73,0.19±0.44
+resnet-ring1-hr-motion-ir,test,ring1,Fold-5,hr,['ir-filtered'],"['deepsquat', 'striding']",resnet,200,0.001,mse,128,8,57.62±1.69,57.80±13.85,67.64±0.69,0.17±0.40
+resnet-ring1-hr-motion-ir,test,ring1,all-folds,hr,['ir-filtered'],"['deepsquat', 'striding']",resnet,200,0.001,mse,128,57,33.55±2.09,37.01±11.88,41.58±3.16,-0.06±0.13

@@ -1,0 +1,3 @@
+exp_name,mode,ring_type,fold,task,input_type,dataset_task,method_name,epochs,lr,criterion,batch_size,sample_len,mae_with_std,rmse_with_std,mape_with_std,pearson_with_std
+peak-motion,test,ring2,,oura_hr,['ir-filtered'],"['deepsquat', 'striding']",peak,200,0.001,mse,128,6,35.96±4.01,37.06±17.93,37.85±4.37,-0.93±0.18
+peak-motion,test,ring1,,oura_hr,['ir-filtered'],"['deepsquat', 'striding']",peak,200,0.001,mse,128,7,16.47±6.32,22.61±18.41,20.90±9.46,0.33±0.42

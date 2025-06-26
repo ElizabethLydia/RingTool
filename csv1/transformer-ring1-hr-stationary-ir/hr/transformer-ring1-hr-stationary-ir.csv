@@ -1,0 +1,7 @@
+exp_name,mode,ring_type,fold,task,input_type,dataset_task,method_name,epochs,lr,criterion,batch_size,sample_len,mae_with_std,rmse_with_std,mape_with_std,pearson_with_std
+transformer-ring1-hr-stationary-ir,test,ring1,Fold-1,hr,['ir-filtered'],"['sitting', 'spo2', 'talking', 'shaking_head', 'standing']",transformer,200,0.001,mse,128,168,4.89±0.25,5.87±1.86,5.92±0.32,-0.10±0.08
+transformer-ring1-hr-stationary-ir,test,ring1,Fold-2,hr,['ir-filtered'],"['sitting', 'spo2', 'talking', 'shaking_head', 'standing']",transformer,200,0.001,mse,128,72,7.32±0.52,8.55±2.93,8.81±0.60,0.40±0.11
+transformer-ring1-hr-stationary-ir,test,ring1,Fold-3,hr,['ir-filtered'],"['sitting', 'spo2', 'talking', 'shaking_head', 'standing']",transformer,200,0.001,mse,128,94,6.05±0.42,7.29±2.49,7.84±0.56,0.52±0.09
+transformer-ring1-hr-stationary-ir,test,ring1,Fold-4,hr,['ir-filtered'],"['sitting', 'spo2', 'talking', 'shaking_head', 'standing']",transformer,200,0.001,mse,128,54,32.51±0.66,32.86±6.89,31.35±0.42,0.05±0.14
+transformer-ring1-hr-stationary-ir,test,ring1,Fold-5,hr,['ir-filtered'],"['sitting', 'spo2', 'talking', 'shaking_head', 'standing']",transformer,200,0.001,mse,128,87,14.62±0.59,15.59±3.95,21.92±1.01,-0.34±0.10
+transformer-ring1-hr-stationary-ir,test,ring1,all-folds,hr,['ir-filtered'],"['sitting', 'spo2', 'talking', 'shaking_head', 'standing']",transformer,200,0.001,mse,128,475,10.41±0.44,14.18±4.02,12.56±0.48,-0.37±0.04

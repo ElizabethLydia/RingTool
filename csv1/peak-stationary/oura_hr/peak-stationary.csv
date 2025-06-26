@@ -1,0 +1,3 @@
+exp_name,mode,ring_type,fold,task,input_type,dataset_task,method_name,epochs,lr,criterion,batch_size,sample_len,mae_with_std,rmse_with_std,mape_with_std,pearson_with_std
+peak-stationary,test,ring2,,oura_hr,['ir-filtered'],"['sitting', 'spo2', 'talking', 'shaking_head', 'standing']",peak,200,0.001,mse,128,33,8.55±1.75,13.09±8.20,10.81±2.26,0.28±0.17
+peak-stationary,test,ring1,,oura_hr,['ir-filtered'],"['sitting', 'spo2', 'talking', 'shaking_head', 'standing']",peak,200,0.001,mse,128,51,17.38±2.60,25.30±10.92,21.60±3.29,0.07±0.14

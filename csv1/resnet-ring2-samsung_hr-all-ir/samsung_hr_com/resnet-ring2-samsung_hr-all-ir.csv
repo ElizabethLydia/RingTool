@@ -1,0 +1,3 @@
+exp_name,mode,ring_type,fold,task,input_type,dataset_task,method_name,epochs,lr,criterion,batch_size,sample_len,mae_with_std,rmse_with_std,mape_with_std,pearson_with_std
+resnet-ring2-samsung_hr-all-ir,test,ring2,Fold-1,samsung_hr_com,['ir-filtered'],"['sitting', 'spo2', 'deepsquat', 'talking', 'shaking_head', 'standing', 'striding']",resnet,200,0.001,mse,128,9,4.87±2.56,8.73±8.29,5.69±2.95,0.28±0.36
+resnet-ring2-samsung_hr-all-ir,test,ring2,Fold-2,samsung_hr_com,['ir-filtered'],"['sitting', 'spo2', 'deepsquat', 'talking', 'shaking_head', 'standing', 'striding']",resnet,200,0.001,mse,128,11,13.43±6.65,24.94±21.44,16.47±8.43,0.57±0.27

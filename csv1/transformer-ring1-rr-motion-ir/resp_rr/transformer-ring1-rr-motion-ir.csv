@@ -1,0 +1,7 @@
+exp_name,mode,ring_type,fold,task,input_type,dataset_task,method_name,epochs,lr,criterion,batch_size,sample_len,mae_with_std,rmse_with_std,mape_with_std,pearson_with_std
+transformer-ring1-rr-motion-ir,test,ring1,Fold-1,resp_rr,['ir-filtered-rr'],"['deepsquat', 'striding']",transformer,200,0.001,mse,128,22,5.91±0.74,6.81±3.17,24.78±2.35,0.57±0.18
+transformer-ring1-rr-motion-ir,test,ring1,Fold-2,resp_rr,['ir-filtered-rr'],"['deepsquat', 'striding']",transformer,200,0.001,mse,128,12,5.96±1.15,7.08±3.78,23.85±4.00,-0.73±0.22
+transformer-ring1-rr-motion-ir,test,ring1,Fold-3,resp_rr,['ir-filtered-rr'],"['deepsquat', 'striding']",transformer,200,0.001,mse,128,10,1.18±0.35,1.57±1.07,7.03±2.24,-0.74±0.24
+transformer-ring1-rr-motion-ir,test,ring1,Fold-4,resp_rr,['ir-filtered-rr'],"['deepsquat', 'striding']",transformer,200,0.001,mse,128,7,7.46±1.05,7.89±3.95,30.99±3.18,-0.30±0.43
+transformer-ring1-rr-motion-ir,test,ring1,Fold-5,resp_rr,['ir-filtered-rr'],"['deepsquat', 'striding']",transformer,200,0.001,mse,128,8,3.87±1.42,5.39±4.06,36.84±21.51,-0.17±0.40
+transformer-ring1-rr-motion-ir,test,ring1,all-folds,resp_rr,['ir-filtered-rr'],"['deepsquat', 'striding']",transformer,200,0.001,mse,128,59,5.03±0.49,6.26±2.43,23.96±3.24,-0.41±0.12
