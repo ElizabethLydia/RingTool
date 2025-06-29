@@ -1,0 +1,114 @@
+{
+    "exp_name": "ratio",
+    "mode": "test",
+    "split": {
+        "train": [
+            "00009",
+            "00020",
+            "00022",
+            "00012",
+            "00031"
+        ],
+        "valid": [
+            "00005"
+        ],
+        "test": [
+            "00029"
+        ],
+        "5-Fold": {
+            "Fold-1": [
+                "00009",
+                "00020"
+            ],
+            "Fold-2": [
+                "00022",
+                "00012"
+            ],
+            "Fold-3": [
+                "00031"
+            ],
+            "Fold-4": [
+                "00005"
+            ],
+            "Fold-5": [
+                "00029"
+            ]
+        }
+    },
+    "dataset": {
+        "ring_type": "ring2",
+        "input_type": [
+            "ir-raw",
+            "red-raw"
+        ],
+        "label_type": [
+            "spo2"
+        ],
+        "shuffle": true,
+        "batch_size": 128,
+        "quality_assessment": {
+            "method": "elgendi",
+            "th": 0
+        },
+        "target_fs": 100,
+        "window_duration": 30,
+        "experiment": [
+            "Health",
+            "Daily",
+            "Sport"
+        ],
+        "task": [
+            "spo2"
+        ]
+    },
+    "seed": 42,
+    "csv_path": "csv/ratio/ratio.csv",
+    "img_path": "img/ratio",
+    "method": {
+        "name": "ratio",
+        "type": "unsupervised",
+        "model_path": null,
+        "params": {
+            "in_channels": 1,
+            "base_filters": 32,
+            "kernel_size": 5,
+            "stride": 2,
+            "groups": 1,
+            "n_block": 8,
+            "n_classes": 180,
+            "downsample_gap": 2,
+            "increasefilter_gap": 4,
+            "backbone": false
+        }
+    },
+    "train": {
+        "device": "1",
+        "epochs": 200,
+        "lr": 0.001,
+        "criterion": "mse",
+        "optimizer": "adam",
+        "early_stopping": {
+            "monitor": "val_loss",
+            "patience": 30,
+            "mode": "min"
+        },
+        "model_checkpoint": {
+            "monitor": "val_loss",
+            "mode": "min",
+            "save_best_only": true
+        }
+    },
+    "test": {
+        "device": "1",
+        "batch_size": 128,
+        "metrics": [
+            "mae",
+            "rmse",
+            "mape",
+            "pearson"
+        ],
+        "model_path": null,
+        "model_name": null
+    },
+    "pretrain_model": "TODO"
+}

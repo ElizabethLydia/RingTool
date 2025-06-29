@@ -1,0 +1,121 @@
+{
+    "exp_name": "mamba2-ring1-samsung_hr-all-ir",
+    "mode": "test",
+    "split": {
+        "train": [
+            "00009",
+            "00020",
+            "00022",
+            "00012",
+            "00031"
+        ],
+        "valid": [
+            "00005"
+        ],
+        "test": [
+            "00029"
+        ],
+        "5-Fold": {
+            "Fold-1": [
+                "00009",
+                "00020"
+            ],
+            "Fold-2": [
+                "00022",
+                "00012"
+            ],
+            "Fold-3": [
+                "00031"
+            ],
+            "Fold-4": [
+                "00005"
+            ],
+            "Fold-5": [
+                "00029"
+            ]
+        }
+    },
+    "dataset": {
+        "ring_type": "ring1",
+        "input_type": [
+            "ir-filtered"
+        ],
+        "label_type": [
+            "samsung_hr"
+        ],
+        "shuffle": true,
+        "batch_size": 32,
+        "quality_assessment": {
+            "method": "elgendi",
+            "th": 0
+        },
+        "target_fs": 100,
+        "window_duration": 30,
+        "experiment": [
+            "Health",
+            "Daily",
+            "Sport"
+        ],
+        "task": [
+            "sitting",
+            "spo2",
+            "deepsquat",
+            "talking",
+            "shaking_head",
+            "standing",
+            "striding"
+        ],
+        "accel_combined": false,
+        "accel_combined_method": "magnitude"
+    },
+    "seed": 42,
+    "csv_path": "csv/mamba2/mamba2.csv",
+    "img_path": "img/mamba2",
+    "method": {
+        "name": "mamba2",
+        "type": "ML",
+        "model_path": null,
+        "params": {
+            "in_channels": 1,
+            "len_sw": 3000,
+            "n_classes": 2,
+            "dim": 256,
+            "depth": 4,
+            "heads": 4,
+            "mlp_dim": 64,
+            "dropout": 0.1,
+            "backbone": false
+        }
+    },
+    "train": {
+        "device": "0",
+        "epochs": 200,
+        "gradient_accum": 1,
+        "lr": 0.0001,
+        "criterion": "mse",
+        "optimizer": "adam",
+        "early_stopping": {
+            "monitor": "val_loss",
+            "patience": 20,
+            "mode": "min"
+        },
+        "model_checkpoint": {
+            "monitor": "val_loss",
+            "mode": "min",
+            "save_best_only": true
+        }
+    },
+    "test": {
+        "device": "0",
+        "batch_size": 128,
+        "metrics": [
+            "mae",
+            "rmse",
+            "mape",
+            "pearson"
+        ],
+        "model_path": null,
+        "model_name": null
+    },
+    "pretrain_model": "TODO"
+}

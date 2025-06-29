@@ -1,45 +1,177 @@
-﻿task,ring_type,method_name,mode,mae,rmse,mape,pearson
-hr,ring1,fft,test,16.213333333333335,24.393333333333334,17.963333333333335,0.36000000000000004
-hr,ring1,inception_time,5fold,9.93,13.02,11.93,0.45
-hr,ring1,inception_time,test,13.273333333333333,16.203333333333333,15.950000000000001,0.36999999999999994
-hr,ring1,peak,test,17.01,23.936666666666667,21.913333333333338,0.4066666666666667
-hr,ring1,resnet,5fold,22.45,27.91,29.02,0.49
-hr,ring1,resnet,test,25.706666666666667,30.51,32.70666666666667,0.38666666666666666
-hr,ring1,transformer,5fold,11.16,15.32,13.52,0.37
-hr,ring1,transformer,test,13.003333333333336,17.400000000000002,15.86,0.38000000000000006
-hr,ring2,fft,test,20.976666666666667,30.80666666666667,23.173333333333336,0.09000000000000001
-hr,ring2,inception_time,5fold,10.19,13.39,12.55,0.29
-hr,ring2,inception_time,test,13.733333333333334,16.913333333333334,17.143333333333334,0.2866666666666667
-hr,ring2,peak,test,37.75333333333333,44.85333333333333,52.02,0.5666666666666668
-hr,ring2,resnet,5fold,16.33,19.58,20.24,0.32
-hr,ring2,resnet,test,19.213333333333335,22.486666666666665,23.52,0.24666666666666667
-hr,ring2,transformer,5fold,11.54,14.91,14.3,0.61
-hr,ring2,transformer,test,13.660000000000002,17.763333333333332,16.71,0.5566666666666666
-oura_hr,ring1,fft,test,20.903333333333332,28.87,22.156666666666666,0.5233333333333333
-oura_hr,ring1,peak,test,17.04,24.3,21.33666666666667,0.17
-oura_hr,ring2,fft,test,25.44333333333333,33.54666666666667,26.396666666666665,0.20333333333333337
-oura_hr,ring2,peak,test,19.093333333333334,23.01,21.21,0.48000000000000004
-oura_hr_com,ring1,fft,test,17.59,21.166666666666668,19.866666666666664,0.7533333333333333
-oura_hr_com,ring1,peak,test,17.59,21.166666666666668,19.866666666666664,0.7533333333333333
-oura_hr_com,ring2,fft,test,19.35,22.986666666666668,21.706666666666667,0.7533333333333333
-oura_hr_com,ring2,peak,test,19.35,22.986666666666668,21.706666666666667,0.7533333333333333
-resp_rr,ring1,fft,test,5.3999999999999995,6.283333333333334,29.83,0.24
-resp_rr,ring1,inception_time,5fold,3.39,4.24,20.86,0.01
-resp_rr,ring1,inception_time,test,3.8000000000000003,4.706666666666667,21.790000000000003,0.09000000000000001
-resp_rr,ring1,peak,test,3.6300000000000003,4.733333333333333,21.10666666666667,0.3433333333333333
-resp_rr,ring1,resnet,5fold,3.42,4.35,21.22,0.04
-resp_rr,ring1,resnet,test,3.8666666666666667,4.826666666666667,22.293333333333333,0.08333333333333333
-resp_rr,ring1,transformer,5fold,3.26,4.16,19.9,0.21
-resp_rr,ring1,transformer,test,3.776666666666667,4.746666666666667,21.086666666666666,0.2866666666666667
-resp_rr,ring2,fft,test,4.875,5.695,26.310000000000002,0.295
-resp_rr,ring2,peak,test,3.953333333333333,5.076666666666667,24.75,0.17666666666666667
-samsung_hr,ring1,fft,test,19.83,27.673333333333336,20.493333333333336,0.47333333333333333
-samsung_hr,ring1,peak,test,15.236666666666666,21.613333333333333,19.003333333333334,0.27666666666666667
-samsung_hr,ring2,fft,test,31.386666666666667,42.163333333333334,31.756666666666664,0.20666666666666667
-samsung_hr,ring2,peak,test,21.49666666666667,26.953333333333333,23.243333333333336,0.45333333333333337
-samsung_hr_com,ring1,fft,test,19.336666666666666,25.429999999999996,22.396666666666665,0.65
-samsung_hr_com,ring1,peak,test,19.336666666666666,25.429999999999996,22.396666666666665,0.65
-samsung_hr_com,ring2,fft,test,18.53333333333333,24.613333333333333,20.16,0.7233333333333333
-samsung_hr_com,ring2,peak,test,18.53333333333333,24.613333333333333,20.16,0.7233333333333333
-spo2,ring1,ratio,test,4.3,6.05,4.75,0.2
-spo2,ring2,ratio,test,3.29,4.18,3.6,0.25
+﻿task          , ring_type, method_name   , mode , scene     , mae               , rmse              , mape              , pearson
+BP_dia        , ring1    , inception_time, 5fold, all       ,  8.56             , 10.94             , 12.81             , 0.04
+BP_dia        , ring1    , resnet        , 5fold, all       ,  7.42             ,  9.53             , 11.42             , 0.11
+BP_dia        , ring1    , transformer   , 5fold, all       ,  8.66             , 10.53             , 13.45             , 0.06
+BP_dia        , ring2    , inception_time, 5fold, all       , 10.02             , 12.84             , 15.14             , 0.23
+BP_dia        , ring2    , resnet        , 5fold, all       ,  8.63             , 10.89             , 13.66             , 0.14
+BP_dia        , ring2    , transformer   , 5fold, all       ,  8.87             , 10.94             , 13.78             , 0.08
+BP_sys        , ring1    , inception_time, 5fold, all       , 16.08             , 20.11             , 14.6              , 0.0
+BP_sys        , ring1    , resnet        , 5fold, all       , 14.0              , 17.07             , 13.26             , 0.06
+BP_sys        , ring1    , transformer   , 5fold, all       , 15.04             , 17.58             , 14.08             , 0.08
+BP_sys        , ring2    , inception_time, 5fold, all       , 15.88             , 20.16             , 14.97             , 0.08
+BP_sys        , ring2    , resnet        , 5fold, all       , 17.32             , 20.26             , 16.5              , 0.13
+BP_sys        , ring2    , transformer   , 5fold, all       , 17.13             , 20.23             , 15.65             , 0.08
+hr            , ring1    , fft           , test , motion    , 39.25             , 45.25             , 43.65             , 0.09
+hr            , ring1    , fft           , test , stationary,  6.04             , 14.5              ,  7.3              , 0.56
+hr            , ring1    , fft           , test , unknown   ,  9.32             , 19.8              , 10.9              , 0.36
+hr            , ring1    , inception_time, 5fold, all       ,  7.24             , 10.78             ,  9.3              , 0.59
+hr            , ring1    , inception_time, test , all       ,  6.01             ,  9.63             ,  7.84             , 0.68
+hr            , ring1    , inception_time, test , motion    , 18.76             , 23.83             , 25.9              , 0.1
+hr            , ring1    , inception_time, test , stationary,  4.61             ,  6.37             ,  5.86             , 0.84
+hr            , ring1    , mamba2        , 5fold, all       , 11.402            , 14.128            , 14.157999999999998, 0.13599999999999998
+hr            , ring1    , mamba2        , 5fold, motion    , 21.043333333333333, 24.973333333333333, 26.813333333333333, 0.44
+hr            , ring1    , mamba2        , 5fold, stationary,  9.24             , 11.53             , 11.44             , 0.21
+hr            , ring1    , peak          , test , motion    , 21.27             , 28.93             , 35.86             , 0.12
+hr            , ring1    , peak          , test , stationary, 18.17             , 26.47             , 23.49             , 0.38
+hr            , ring1    , peak          , test , unknown   , 18.47             , 26.72             , 24.72             , 0.32
+hr            , ring1    , resnet        , 5fold, all       ,  6.39             , 10.1              ,  8.53             , 0.67
+hr            , ring1    , resnet        , test , all       ,  5.09             ,  8.8              ,  6.87             , 0.75
+hr            , ring1    , resnet        , test , motion    , 17.99             , 23.15             , 26.79             , 0.06
+hr            , ring1    , resnet        , test , stationary,  3.67             ,  5.2              ,  4.68             , 0.9
+hr            , ring1    , transformer   , 5fold, all       ,  8.22             , 11.64             , 10.56             , 0.5
+hr            , ring1    , transformer   , test , all       ,  6.64             ,  9.99             ,  8.52             , 0.66
+hr            , ring1    , transformer   , test , motion    , 18.53             , 23.33             , 26.52             , 0.07
+hr            , ring1    , transformer   , test , stationary,  5.33             ,  7.14             ,  6.54             , 0.8
+hr            , ring2    , fft           , test , motion    , 39.52             , 45.55             , 42.79             , 0.1
+hr            , ring2    , fft           , test , stationary, 12.42             , 21.4              , 15.21             , 0.18
+hr            , ring2    , fft           , test , unknown   , 15.1              , 24.85             , 17.93             , 0.08
+hr            , ring2    , inception_time, 5fold, all       ,  8.71             , 11.61             , 11.33             , 0.27
+hr            , ring2    , inception_time, test , all       ,  8.09             , 10.71             , 10.67             , 0.42
+hr            , ring2    , inception_time, test , motion    , 15.64             , 20.31             , 21.18             , 0.26
+hr            , ring2    , inception_time, test , stationary,  7.27             ,  9.06             ,  9.51             , 0.47
+hr            , ring2    , mamba2        , 5fold, all       , 11.2475           , 13.49             , 14.375            , 0.05
+hr            , ring2    , mamba2        , 5fold, motion    , 20.296666666666667, 24.546666666666667, 26.650000000000002, 0.2833333333333334
+hr            , ring2    , mamba2        , 5fold, stationary, 10.12             , 11.56             , 12.88             , 0.09
+hr            , ring2    , peak          , test , motion    , 28.85             , 35.35             , 41.07             , 0.26
+hr            , ring2    , peak          , test , stationary, 28.5              , 36.1              , 37.93             , 0.06
+hr            , ring2    , peak          , test , unknown   , 28.53             , 36.03             , 38.24             , 0.0
+hr            , ring2    , resnet        , 5fold, all       ,  7.5              , 10.78             ,  9.94             , 0.47
+hr            , ring2    , resnet        , test , all       ,  7.11             , 10.0              ,  9.56             , 0.56
+hr            , ring2    , resnet        , test , motion    , 14.48             , 19.18             , 20.09             , 0.35
+hr            , ring2    , resnet        , test , stationary,  6.3              ,  8.4              ,  8.41             , 0.63
+hr            , ring2    , transformer   , 5fold, all       ,  9.11             , 11.85             , 11.88             , 0.15
+hr            , ring2    , transformer   , test , all       ,  8.56             , 11.25             , 11.12             , 0.3
+hr            , ring2    , transformer   , test , motion    , 16.02             , 20.88             , 21.09             , 0.2
+hr            , ring2    , transformer   , test , stationary,  7.74             ,  9.63             , 10.02             , 0.32
+oura_hr       , ring1    , fft           , test , motion    , 40.81             , 46.37             , 46.17             , 0.1
+oura_hr       , ring1    , fft           , test , stationary,  5.57             , 13.38             ,  6.66             , 0.68
+oura_hr       , ring1    , fft           , test , unknown   , 11.37             , 22.43             , 13.16             , 0.4
+oura_hr       , ring1    , inception_time, test , all       ,  7.75             , 12.41             , 10.44             , 0.62
+oura_hr       , ring1    , inception_time, test , motion    , 20.64             , 26.29             , 30.11             , 0.12
+oura_hr       , ring1    , inception_time, test , stationary,  5.21             ,  6.94             ,  6.56             , 0.87
+oura_hr       , ring1    , peak          , test , motion    , 23.52             , 32.9              , 42.74             , 0.08
+oura_hr       , ring1    , peak          , test , stationary, 19.1              , 27.39             , 24.83             , 0.33
+oura_hr       , ring1    , peak          , test , unknown   , 19.82             , 28.37             , 27.78             , 0.26
+oura_hr       , ring1    , resnet        , test , all       ,  5.86             , 10.94             ,  8.32             , 0.72
+oura_hr       , ring1    , resnet        , test , motion    , 19.54             , 25.18             , 30.45             , 0.01
+oura_hr       , ring1    , resnet        , test , stationary,  3.16             ,  4.28             ,  3.96             , 0.95
+oura_hr       , ring1    , transformer   , test , all       ,  8.0              , 12.41             , 10.66             , 0.63
+oura_hr       , ring1    , transformer   , test , motion    , 19.69             , 25.23             , 29.53             , 0.04
+oura_hr       , ring1    , transformer   , test , stationary,  5.7              ,  7.69             ,  6.95             , 0.85
+oura_hr       , ring2    , fft           , test , motion    , 42.02             , 47.57             , 45.3              , 0.16
+oura_hr       , ring2    , fft           , test , stationary, 12.67             , 22.42             , 14.94             , 0.28
+oura_hr       , ring2    , fft           , test , unknown   , 17.62             , 28.28             , 20.06             , 0.09
+oura_hr       , ring2    , inception_time, test , all       , 10.74             , 13.76             , 13.92             , 0.34
+oura_hr       , ring2    , inception_time, test , motion    , 17.52             , 22.87             , 22.8              , 0.01
+oura_hr       , ring2    , inception_time, test , stationary,  9.36             , 11.03             , 12.12             , 0.45
+oura_hr       , ring2    , peak          , test , motion    , 25.39             , 30.8              , 36.29             , 0.16
+oura_hr       , ring2    , peak          , test , stationary, 13.79             , 18.83             , 18.77             , 0.4
+oura_hr       , ring2    , peak          , test , unknown   , 15.75             , 21.33             , 21.73             , 0.27
+oura_hr       , ring2    , resnet        , test , all       ,  7.55             , 11.55             , 10.22             , 0.62
+oura_hr       , ring2    , resnet        , test , motion    , 15.48             , 21.13             , 21.06             , 0.3
+oura_hr       , ring2    , resnet        , test , stationary,  5.93             ,  8.35             ,  8.01             , 0.75
+oura_hr       , ring2    , transformer   , test , all       , 10.37             , 13.64             , 13.23             , 0.39
+oura_hr       , ring2    , transformer   , test , motion    , 17.03             , 23.18             , 21.7              , 0.15
+oura_hr       , ring2    , transformer   , test , stationary,  9.01             , 10.72             , 11.51             , 0.54
+oura_hr_com   , ring1    , fft           , test , motion    , 42.95             , 48.17             , 66.46             , 0.18
+oura_hr_com   , ring1    , fft           , test , stationary,  3.62             ,  4.91             ,  4.47             , 0.93
+oura_hr_com   , ring1    , fft           , test , unknown   , 10.09             , 20.05             , 14.67             , 0.47
+oura_hr_com   , ring1    , peak          , test , motion    , 42.95             , 48.17             , 66.46             , 0.18
+oura_hr_com   , ring1    , peak          , test , stationary,  3.62             ,  4.91             ,  4.47             , 0.93
+oura_hr_com   , ring1    , peak          , test , unknown   , 10.09             , 20.05             , 14.67             , 0.47
+oura_hr_com   , ring2    , fft           , test , motion    , 44.8              , 49.64             , 62.36             , 0.0
+oura_hr_com   , ring2    , fft           , test , stationary,  3.6              ,  4.91             ,  4.64             , 0.93
+oura_hr_com   , ring2    , fft           , test , unknown   , 10.56             , 20.88             , 14.38             , 0.49
+oura_hr_com   , ring2    , peak          , test , motion    , 44.8              , 49.64             , 62.36             , 0.0
+oura_hr_com   , ring2    , peak          , test , stationary,  3.6              ,  4.91             ,  4.64             , 0.93
+oura_hr_com   , ring2    , peak          , test , unknown   , 10.56             , 20.88             , 14.38             , 0.49
+resp_rr       , ring1    , fft           , test , motion    ,  6.54             ,  7.64             , 33.0              , 0.04
+resp_rr       , ring1    , fft           , test , stationary,  4.58             ,  5.56             , 26.08             , 0.27
+resp_rr       , ring1    , fft           , test , unknown   ,  4.83             ,  5.97             , 26.35             , 0.33
+resp_rr       , ring1    , inception_time, 5fold, all       ,  3.12             ,  4.05             , 20.0              , 0.26
+resp_rr       , ring1    , inception_time, test , all       ,  3.08             ,  4.0              , 20.25             , 0.34
+resp_rr       , ring1    , inception_time, test , motion    ,  4.97             ,  5.97             , 23.0              , 0.0
+resp_rr       , ring1    , inception_time, test , stationary,  2.86             ,  3.7              , 19.93             , 0.28
+resp_rr       , ring1    , mamba2        , 5fold, all       ,  4.105            ,  4.99             , 27.955            , 0.24000000000000002
+resp_rr       , ring1    , mamba2        , 5fold, motion    ,  3.93             ,  4.99             , 20.68             , 0.31
+resp_rr       , ring1    , mamba2        , 5fold, stationary,  4.22             ,  5.05             , 29.41             , 0.27
+resp_rr       , ring1    , peak          , test , motion    ,  4.15             ,  5.41             , 19.88             , 0.3
+resp_rr       , ring1    , peak          , test , stationary,  2.85             ,  3.94             , 18.22             , 0.44
+resp_rr       , ring1    , peak          , test , unknown   ,  2.98             ,  4.12             , 18.39             , 0.5
+resp_rr       , ring1    , resnet        , 5fold, all       ,  3.13             ,  4.06             , 20.13             , 0.28
+resp_rr       , ring1    , resnet        , test , all       ,  3.1              ,  3.98             , 20.49             , 0.37
+resp_rr       , ring1    , resnet        , test , motion    ,  4.78             ,  5.77             , 22.44             , 0.05
+resp_rr       , ring1    , resnet        , test , stationary,  2.9              ,  3.71             , 20.27             , 0.31
+resp_rr       , ring1    , transformer   , 5fold, all       ,  3.34             ,  4.31             , 21.31             , 0.05
+resp_rr       , ring1    , transformer   , test , all       ,  3.3              ,  4.23             , 21.73             , 0.12
+resp_rr       , ring1    , transformer   , test , motion    ,  5.38             ,  6.42             , 24.03             , 0.06
+resp_rr       , ring1    , transformer   , test , stationary,  3.06             ,  3.89             , 21.46             , 0.07
+resp_rr       , ring2    , fft           , test , motion    ,  6.45             ,  7.58             , 35.22             , 0.2
+resp_rr       , ring2    , fft           , test , stationary,  4.93             ,  5.98             , 26.95             , 0.21
+resp_rr       , ring2    , fft           , test , unknown   ,  4.96             ,  6.01             , 27.08             , 0.21
+resp_rr       , ring2    , mamba2        , 5fold, all       ,  4.465            ,  5.235            , 30.33             , 0.29000000000000004
+resp_rr       , ring2    , mamba2        , 5fold, motion    ,  4.49             ,  5.37             , 24.39             , 0.1
+resp_rr       , ring2    , mamba2        , 5fold, stationary,  4.25             ,  5.04             , 29.19             , 0.29
+resp_rr       , ring2    , peak          , test , motion    ,  4.9              ,  6.23             , 27.24             , 0.14
+resp_rr       , ring2    , peak          , test , stationary,  3.72             ,  5.06             , 24.32             , 0.19
+resp_rr       , ring2    , peak          , test , unknown   ,  3.84             ,  5.19             , 24.62             , 0.22
+samsung_hr    , ring1    , fft           , test , motion    , 41.95             , 46.89             , 47.37             , 0.16
+samsung_hr    , ring1    , fft           , test , stationary,  5.13             , 13.51             ,  5.92             , 0.64
+samsung_hr    , ring1    , fft           , test , unknown   , 12.06             , 23.7              , 13.72             , 0.33
+samsung_hr    , ring1    , inception_time, test , all       ,  8.0              , 12.8              , 10.47             , 0.58
+samsung_hr    , ring1    , inception_time, test , motion    , 19.49             , 25.39             , 27.11             , 0.09
+samsung_hr    , ring1    , inception_time, test , stationary,  5.34             ,  7.25             ,  6.62             , 0.84
+samsung_hr    , ring1    , peak          , test , motion    , 22.52             , 31.14             , 38.62             , 0.08
+samsung_hr    , ring1    , peak          , test , stationary, 18.1              , 26.1              , 23.07             , 0.4
+samsung_hr    , ring1    , peak          , test , unknown   , 18.93             , 27.12             , 25.99             , 0.3
+samsung_hr    , ring1    , resnet        , test , all       ,  6.19             , 11.13             ,  8.43             , 0.7
+samsung_hr    , ring1    , resnet        , test , motion    , 18.29             , 23.9              , 27.11             , 0.02
+samsung_hr    , ring1    , resnet        , test , stationary,  3.39             ,  4.49             ,  4.1              , 0.94
+samsung_hr    , ring1    , transformer   , test , all       ,  8.44             , 12.6              , 10.9              , 0.61
+samsung_hr    , ring1    , transformer   , test , motion    , 18.44             , 23.99             , 26.36             , 0.0
+samsung_hr    , ring1    , transformer   , test , stationary,  6.13             ,  7.87             ,  7.31             , 0.83
+samsung_hr    , ring2    , fft           , test , motion    , 40.88             , 46.47             , 44.51             , 0.08
+samsung_hr    , ring2    , fft           , test , stationary, 14.82             , 26.28             , 16.45             , 0.05
+samsung_hr    , ring2    , fft           , test , unknown   , 20.25             , 31.57             , 22.3              , 0.03
+samsung_hr    , ring2    , inception_time, test , all       , 10.79             , 14.15             , 13.83             , 0.39
+samsung_hr    , ring2    , inception_time, test , motion    , 17.63             , 22.71             , 23.52             , 0.01
+samsung_hr    , ring2    , inception_time, test , stationary,  8.99             , 10.83             , 11.29             , 0.54
+samsung_hr    , ring2    , peak          , test , motion    , 26.86             , 32.04             , 38.45             , 0.27
+samsung_hr    , ring2    , peak          , test , stationary, 14.64             , 21.69             , 19.3              , 0.19
+samsung_hr    , ring2    , peak          , test , unknown   , 17.18             , 24.21             , 23.29             , 0.07
+samsung_hr    , ring2    , resnet        , test , all       ,  7.64             , 11.77             , 10.28             , 0.64
+samsung_hr    , ring2    , resnet        , test , motion    , 15.57             , 21.22             , 21.71             , 0.27
+samsung_hr    , ring2    , resnet        , test , stationary,  5.56             ,  7.53             ,  7.27             , 0.82
+samsung_hr    , ring2    , transformer   , test , all       , 11.04             , 14.56             , 13.8              , 0.38
+samsung_hr    , ring2    , transformer   , test , motion    , 17.2              , 23.16             , 22.42             , 0.19
+samsung_hr    , ring2    , transformer   , test , stationary,  9.42             , 11.26             , 11.54             , 0.58
+samsung_hr_com, ring1    , fft           , test , motion    , 38.51             , 44.59             , 56.51             , 0.38
+samsung_hr_com, ring1    , fft           , test , stationary,  3.27             ,  4.25             ,  4.07             , 0.96
+samsung_hr_com, ring1    , fft           , test , unknown   ,  9.9              , 19.72             , 13.94             , 0.56
+samsung_hr_com, ring1    , peak          , test , motion    , 38.51             , 44.59             , 56.51             , 0.38
+samsung_hr_com, ring1    , peak          , test , stationary,  3.27             ,  4.25             ,  4.07             , 0.96
+samsung_hr_com, ring1    , peak          , test , unknown   ,  9.9              , 19.72             , 13.94             , 0.56
+samsung_hr_com, ring2    , fft           , test , motion    , 36.03             , 42.64             , 49.17             , 0.41
+samsung_hr_com, ring2    , fft           , test , stationary,  3.07             ,  4.0              ,  3.89             , 0.97
+samsung_hr_com, ring2    , fft           , test , unknown   ,  9.94             , 19.78             , 13.32             , 0.61
+samsung_hr_com, ring2    , peak          , test , motion    , 36.03             , 42.64             , 49.17             , 0.41
+samsung_hr_com, ring2    , peak          , test , stationary,  3.07             ,  4.0              ,  3.89             , 0.97
+samsung_hr_com, ring2    , peak          , test , unknown   ,  9.94             , 19.78             , 13.32             , 0.61
+spo2          , ring1    , inception_time, 5fold, unknown   ,  3.33             ,  4.61             ,  3.71             , 0.08
+spo2          , ring1    , ratio         , test , unknown   ,  3.57             ,  4.65             ,  3.86             , 0.3
+spo2          , ring1    , resnet        , 5fold, unknown   ,  3.19             ,  4.4              ,  3.55             , 0.15
+spo2          , ring1    , transformer   , 5fold, unknown   ,  3.29             ,  4.66             ,  3.67             , 0.06
+spo2          , ring2    , inception_time, 5fold, unknown   ,  3.46             ,  4.91             ,  3.86             , 0.0
+spo2          , ring2    , ratio         , test , unknown   ,  3.31             ,  3.95             ,  3.58             , 0.28
+spo2          , ring2    , resnet        , 5fold, unknown   ,  3.48             ,  4.93             ,  3.88             , 0.02
+spo2          , ring2    , transformer   , 5fold, unknown   ,  3.49             ,  4.99             ,  3.91             , 0.06

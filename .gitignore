@@ -36,3 +36,33 @@ data_path.toml
 .backup/
 
 /root/RingTool/csv
+
+/root/RingTool/RingDataRaw.zip
+t-Ring.zip
+.gitignore
+RingDataRaw.zip
+
+/root/RingTool/config1/
+
+/root/RingTool/config/
+
+
+RingDataRaw/*
+
+RingDataProcessed/*
+
+/root/RingTool/visualizations/
+
+
+# ===== RingTool large outputs / datasets =====
+data/rings/*
+RingDataRaw/
+onnx/
+models*/
+img*/
+output*/
+*.png
+*.pt
+*.npz
+*.ipynb_checkpoints
+t-Ring/*

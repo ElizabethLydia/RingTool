@@ -1,0 +1,131 @@
+{
+    "exp_name": "inception-time-ring1-rr-all-ir",
+    "mode": "test",
+    "split": {
+        "train": [
+            "00009",
+            "00020",
+            "00022",
+            "00012",
+            "00031"
+        ],
+        "valid": [
+            "00005"
+        ],
+        "test": [
+            "00029"
+        ],
+        "5-Fold": {
+            "Fold-1": [
+                "00009",
+                "00020"
+            ],
+            "Fold-2": [
+                "00022",
+                "00012"
+            ],
+            "Fold-3": [
+                "00031"
+            ],
+            "Fold-4": [
+                "00005"
+            ],
+            "Fold-5": [
+                "00029"
+            ]
+        }
+    },
+    "dataset": {
+        "ring_type": "ring1",
+        "input_type": [
+            "ir-filtered-rr"
+        ],
+        "label_type": [
+            "resp_rr"
+        ],
+        "shuffle": true,
+        "batch_size": 128,
+        "quality_assessment": {
+            "method": "elgendi",
+            "th": 0
+        },
+        "target_fs": 100,
+        "window_duration": 30,
+        "experiment": [
+            "Health",
+            "Daily",
+            "Sport"
+        ],
+        "task": [
+            "sitting",
+            "spo2",
+            "deepsquat",
+            "talking",
+            "shaking_head",
+            "standing",
+            "striding"
+        ],
+        "accel_combined": false,
+        "accel_combined_method": "magnitude"
+    },
+    "seed": 42,
+    "csv_path": "csv/inception_time/inception_time.csv",
+    "img_path": "img/inception_time",
+    "method": {
+        "name": "inception_time",
+        "type": "ML",
+        "model_path": null,
+        "params": {
+            "in_channels": 1,
+            "out_dim": 200,
+            "num_blocks": 1,
+            "num_inception_per_block": 2,
+            "kernel_sizes": [
+                9,
+                19
+            ],
+            "bottleneck_channels": 16,
+            "use_residual": true,
+            "channels_first": false,
+            "verbose": false,
+            "backbone": false
+        }
+    },
+    "train": {
+        "device": "0",
+        "epochs": 200,
+        "lr": 0.001,
+        "criterion": "mse",
+        "optimizer": "adam",
+        "early_stopping": {
+            "monitor": "val_loss",
+            "patience": 200,
+            "mode": "min"
+        },
+        "scheduler": {
+            "type": "reduce_on_plateau",
+            "factor": 0.5,
+            "patience": 10,
+            "threshold": 0.0001,
+            "min_lr": 1e-06
+        },
+        "model_checkpoint": {
+            "monitor": "val_loss",
+            "mode": "min",
+            "save_best_only": true
+        }
+    },
+    "test": {
+        "device": "0",
+        "batch_size": 128,
+        "metrics": [
+            "mae",
+            "rmse",
+            "mape",
+            "pearson"
+        ],
+        "model_path": null,
+        "model_name": null
+    },
+    "pretrain_model": "TODO"
+}
